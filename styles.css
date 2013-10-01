@@ -27,14 +27,39 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .fadeDancer{
-  /* a 10px red border with a radius of 10px to make a circle */
-  border:10px solid blue;
-  border-radius:10px;
+  border:60px solid blue;
+  border-radius:60px;
   position:absolute;
 }
 .rotateDancer{
-  /* a 10px red border with a radius of 10px to make a circle */
   border:10px solid yellow;
   border-radius:0;
   position:absolute;
+}
+.massiveDancer{
+  width: 150px;
+  height: 150px;
+  background: orange;
+  position:absolute;
+}
+.massiveDancer:before, .massiveDancer:after {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 150px;
+ width: 150px;
+ background: orange;
+}
+.massiveDancer:before {
+ -webkit-transform: rotate(30deg);
+ -moz-transform: rotate(30deg);
+ -ms-transform: rotate(30deg);
+ -o-transform: rotate(30deg);
+}
+.massiveDancer:after {
+ -webkit-transform: rotate(60deg);
+ -moz-transform: rotate(60deg);
+ -ms-transform: rotate(60deg);
+ -o-transform: rotate(60deg);
 }
