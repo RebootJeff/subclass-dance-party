@@ -9,9 +9,4 @@ MassiveDancer.prototype.constructor = RotateDancer;
 
 MassiveDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
-  var styles = {
-    
-  };
-
-  this.$node.animate();
 };

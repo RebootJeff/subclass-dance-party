@@ -32,9 +32,20 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .rotateDancer{
-  border:10px solid yellow;
+  border:40px solid yellow;
   border-radius:0;
   position:absolute;
+  -webkit-animation-name: spin;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform:rotate(0deg);
+  }
+  to {
+    -webkit-transform:rotate(360deg);
+  } 
 }
 .massiveDancer{
   width: 150px;
