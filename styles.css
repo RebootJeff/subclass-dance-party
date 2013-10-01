@@ -31,7 +31,11 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .invaderDancer{
-  background-image: url('img/space_invader.png');
+  background-image: url(img/space_invader.png);
+  -webkit-background-size: cover;
+  width: 60px;
+  height: 50px;
+  position: absolute;
   /*position: absolute;
   box-shadow:
     0 0 0 1em red,

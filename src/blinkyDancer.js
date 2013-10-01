@@ -13,3 +13,11 @@ BlinkyDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
   this.$node.toggle();
 };
+
+BlinkyDancer.prototype.lineUp = function(top){
+  Dancer.prototype.lineUp.call(this, top);
+  var cssFunc = function(){
+    this.$node.css('display','inline');
+  };
+  setTimeout(cssFunc.bind(this), this._timeBetweenSteps);
+};

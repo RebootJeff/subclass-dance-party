@@ -55,15 +55,20 @@
         });
 
         $(".lineUpButton").on("click", function(event){
-          var lastTop = 30;
-          var borderWidth;
+          var lastTop = 35;
+          var borderWidth = 0;
+          var height = 0;
 
           for(var i = 0; i < window.dancers.length; i++){
-            borderWidth = window.dancers[i].$node.css('border-width');
-            borderWidth = parseInt(borderWidth.substr(0,borderWidth.length-2),10);
-            window.dancers[i].lineUp(lastTop+(borderWidth*2)+30);
-            lastTop = window.dancers[i].$node.css('top');
-            lastTop = parseInt(lastTop.substr(0,lastTop.length-2),10);
+            if(height === 0){
+              lastTop += borderWidth * 2;
+            } else {
+              lastTop += height;
+            }
+            window.dancers[i].lineUp(lastTop);
+            borderWidth = parseInt(window.dancers[i].$node.css('border-width').substr(0,window.dancers[i].$node.css('border-width').length-2),10);
+            height = parseInt(window.dancers[i].$node.css('height').substr(0, window.dancers[i].$node.css('height').length-2));
+            lastTop += 10;
           }
         });
 
