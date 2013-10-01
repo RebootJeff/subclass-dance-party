@@ -37,13 +37,13 @@
           var Dancer = window[dancerMakerFunctionName];
 
           // make a dancer with a random position
-          var dancer = new Dancer(                       // = makeBlinkyDancer()
+          var dancer = new Dancer(
             $("body").height() * Math.random(),
             $("body").width() * Math.random(),
             Math.random() * 1000
           );
 
-          $('body').append(dancer._blinkyDancer.$node);
+          $('body').append(dancer.$node);
         });
       });
     </script>
