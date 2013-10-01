@@ -66,7 +66,7 @@
               lastTop += height;
             }
             window.dancers[i].lineUp(lastTop);
-            borderWidth = parseInt(window.dancers[i].$node.css('border-width').substr(0,window.dancers[i].$node.css('border-width').length-2),10);
+            borderWidth = parseInt(window.dancers[i].$node.css('border-width').substr(0,window.dancers[i].$node.css('border-width').length-2));
             height = parseInt(window.dancers[i].$node.css('height').substr(0, window.dancers[i].$node.css('height').length-2));
             lastTop += 10;
           }
