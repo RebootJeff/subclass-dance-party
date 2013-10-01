@@ -6,7 +6,7 @@
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
-    <script src="src/fadeDancer.js"></script>
+    <script src="src/invaderDancer.js"></script>
     <script src="src/rotateDancer.js"></script>
     <script src="src/massiveDancer.js"></script>
   </head>
@@ -15,9 +15,10 @@
     <div class="topbar">
       <span class="title">object dance party</span>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a BlinkyDancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="FadeDancer">add a FadeDancer</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="InvaderDancer">add a Space Invader</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="RotateDancer">add a RotateDancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="MassiveDancer">add a MassiveDancer</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="MassiveDancer">unleash PACMAN</a>
+      <a href="#" class="lineUpButton alignLeft">Line Up!</a> 
     </div>
 
     <script>
@@ -50,7 +51,22 @@
           );
 
           $('body').append(dancer.$node);
+          window.dancers.push(dancer);
         });
+
+        $(".lineUpButton").on("click", function(event){
+          var lastTop = 30;
+          var borderWidth;
+
+          for(var i = 0; i < window.dancers.length; i++){
+            borderWidth = window.dancers[i].$node.css('border-width');
+            borderWidth = parseInt(borderWidth.substr(0,borderWidth.length-2),10);
+            window.dancers[i].lineUp(lastTop+(borderWidth*2)+30);
+            lastTop = window.dancers[i].$node.css('top');
+            lastTop = parseInt(lastTop.substr(0,lastTop.length-2),10);
+          }
+        });
+
       });
     </script>
 

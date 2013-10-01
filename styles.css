@@ -20,19 +20,60 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+.alignLeft{
+  float: left;
+  padding: 5px 12px;
+}
 .dancer{
   /* a 10px red border with a radius of 10px to make a circle */
   border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
-.fadeDancer{
-  border:60px solid blue;
-  border-radius:60px;
-  position:absolute;
+.invaderDancer{
+  background-image: url('img/space_invader.png');
+  /*position: absolute;
+  box-shadow:
+    0 0 0 1em red,
+    0 1em 0 1em red,
+    -2.5em 1.5em 0 .5em red,
+    2.5em 1.5em 0 .5em red,
+    -3em -3em 0 0 red,
+    3em -3em 0 0 red,
+    -2em -2em 0 0 red,
+    2em -2em 0 0 red,
+    -3em -1em 0 0 red,
+    -2em -1em 0 0 red,
+    2em -1em 0 0 red,
+    3em -1em 0 0 red,
+    -4em 0 0 0 red,
+    -3em 0 0 0 red,
+    3em 0 0 0 red,
+    4em 0 0 0 red,
+    -5em 1em 0 0 red,
+    -4em 1em 0 0 red,
+    4em 1em 0 0 red,
+    5em 1em 0 0 red,
+    -5em 2em 0 0 red,
+    5em 2em 0 0 red,
+    -5em 3em 0 0 red,
+    -3em 3em 0 0 red,
+    3em 3em 0 0 red,
+    5em 3em 0 0 red,
+    -2em 4em 0 0 red,
+    -1em 4em 0 0 red,
+    1em 4em 0 0 red,
+    2em 4em 0 0 red;
+
+  background: red;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+
+  margin: 50px 0 70px 65px;*/
 }
 .rotateDancer{
-  border:40px solid yellow;
+  border:40px solid purple;
   border-radius:0;
   position:absolute;
   -webkit-animation-name: spin;
@@ -47,6 +88,20 @@ body, a:link, a:visited, a:active{
     -webkit-transform:rotate(360deg);
   } 
 }
+.massiveDancer{
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-right: 60px solid transparent;
+  border-top: 60px solid yellow;
+  border-left: 60px solid yellow;
+  border-bottom: 60px solid yellow;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+/*  ORIGINAL MASSIVE DANCER CSS - 12pt STAR
 .massiveDancer{
   width: 150px;
   height: 150px;
@@ -73,4 +128,4 @@ body, a:link, a:visited, a:active{
  -moz-transform: rotate(60deg);
  -ms-transform: rotate(60deg);
  -o-transform: rotate(60deg);
-}
+}*/
