@@ -13,3 +13,33 @@ BlinkyDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
   this.$node.toggle();
 };
+
+var FadeDancer = function(top, left, timeBetweenSteps) {
+  Dancer.apply(this, arguments);
+  this.$node.removeClass('dancer');
+  this.$node.addClass('fadeDancer');
+};
+
+FadeDancer.prototype = Object.create(Dancer.prototype);
+FadeDancer.prototype.constructor = FadeDancer;
+
+FadeDancer.prototype.step = function(){
+  Dancer.prototype.step.call(this);
+  this.$node.fadeToggle(500);
+};
+
+var RotateDancer = function(top, left, timeBetweenSteps){
+  Dancer.apply(this, arguments);
+  this.$node.removeClass('dancer');
+  this.$node.addClass('rotateDancer');
+};
+
+RotateDancer.prototype = Object.create(Dancer.prototype);
+RotateDancer.prototype.constructor = RotateDancer;
+
+RotateDancer.prototype.step = function(){
+  Dancer.prototype.step.call(this);
+  this.$node.animate({step: function(now, fx) {
+    $(this).css('-webkit-transform', 'rotate('+now+'deg)');
+  }});
+};

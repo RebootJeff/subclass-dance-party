@@ -26,3 +26,15 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.fadeDancer{
+  /* a 10px red border with a radius of 10px to make a circle */
+  border:10px solid blue;
+  border-radius:10px;
+  position:absolute;
+}
+.rotateDancer{
+  /* a 10px red border with a radius of 10px to make a circle */
+  border:10px solid yellow;
+  border-radius:0;
+  position:absolute;
+}
